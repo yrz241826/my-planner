@@ -10,8 +10,8 @@ if not qq_email or not auth_code:
     print('❌ 邮箱配置缺失')
     sys.exit(1)
 
-# 读取今日计划文件
-plan_path = '02_今日记录.md'
+# 读取今日邮件正文（由 Hermes 生成的可读版本）
+plan_path = '06_今日邮件正文.md'
 if os.path.exists(plan_path):
     with open(plan_path, 'r', encoding='utf-8') as f:
         plan = f.read()
